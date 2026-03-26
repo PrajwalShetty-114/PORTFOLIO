@@ -1068,6 +1068,14 @@ main {
 }
 
 @media (max-width: 760px) {
+  main {
+    padding-top: 7.3rem;
+  }
+
+  .section {
+    scroll-margin-top: 7.2rem;
+  }
+
   .navbar {
     align-items: center;
     flex-wrap: wrap;
@@ -1138,11 +1146,12 @@ main {
   }
 
   main {
-    padding-top: 6.3rem;
+    padding-top: 7.6rem;
     padding-bottom: 4rem;
   }
 
   .section {
+    scroll-margin-top: 7.5rem;
     padding-top: 3.5rem;
   }
 
