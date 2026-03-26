@@ -286,6 +286,10 @@ main {
   padding-top: 2.8rem;
 }
 
+.hero-copy {
+  min-width: 0;
+}
+
 .eyebrow {
   margin: 0 0 1rem;
   text-transform: uppercase;
@@ -322,6 +326,7 @@ main {
 .hero-lead {
   max-width: 58ch;
   margin: 1rem 0 0;
+  overflow-wrap: anywhere;
 }
 
 .hero-actions {
@@ -329,6 +334,7 @@ main {
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1.4rem;
+  min-width: 0;
 }
 
 .btn {
@@ -365,6 +371,7 @@ main {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.85rem;
   margin-top: 1.7rem;
+  min-width: 0;
 }
 
 .hero-metrics article,
@@ -508,6 +515,7 @@ main {
   position: relative;
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   min-width: 0;
+  height: 100%;
 }
 
 .project-image-wrap {
@@ -569,6 +577,7 @@ main {
   display: flex;
   flex: 1;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .journey-grid {
@@ -748,7 +757,7 @@ main {
   .project-grid {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: minmax(240px, 260px);
+    grid-auto-columns: minmax(310px, 360px);
     grid-template-columns: none;
     overflow-x: auto;
     overflow-y: hidden;
@@ -764,6 +773,7 @@ main {
 
   .project-card {
     scroll-snap-align: start;
+    min-height: 100%;
   }
 
   .journey-grid {
@@ -874,11 +884,14 @@ main {
   .hero h1 {
     font-size: clamp(2.35rem, 11vw, 3.4rem);
     max-width: none;
+    overflow-wrap: anywhere;
   }
 
   .hero-visual {
     min-height: 0;
     padding-inline: 0;
+    display: flex;
+    justify-content: center;
   }
 
   .portrait-card {
@@ -891,10 +904,6 @@ main {
     position: static;
     width: auto;
     margin-top: 1rem;
-  }
-
-  .hero-visual {
-    display: block;
   }
 
   .contact-shell {
@@ -925,9 +934,15 @@ main {
     gap: 1.4rem;
   }
 
+  .hero-copy,
+  .hero-copy > * {
+    max-width: 100%;
+  }
+
   .eyebrow {
     letter-spacing: 0.14em;
     font-size: 0.72rem;
+    overflow-wrap: anywhere;
   }
 
   .hero-lead,
@@ -964,6 +979,10 @@ main {
 
   .hero-metrics {
     grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    justify-content: center;
   }
 
   .hero-metrics article,
