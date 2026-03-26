@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="page-shell">
         <div class="ambient ambient-one"></div>
         <div class="ambient ambient-two"></div>
@@ -24,12 +25,12 @@
             <nav class="navbar">
                 <a class="logo" href="#hero">Prajwal Shetty</a>
 
-                <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+                <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-panel">
                     <span></span>
                     <span></span>
                 </button>
 
-                <div class="nav-panel">
+                <div id="nav-panel" class="nav-panel">
                     <ul class="nav-links">
                         <li><a href="#hero">Home</a></li>
                         <li><a href="#about">About</a></li>
@@ -44,7 +45,7 @@
             </nav>
         </header>
 
-        <main>
+        <main id="main-content">
             <section id="hero" class="hero">
                 <div class="hero-copy reveal">
                     <p class="eyebrow">Full Stack Developer - AI Explorer - Problem Solver</p>
@@ -128,7 +129,7 @@
                 </div>
 
                 <div class="project-grid">
-                    <article class="project-card reveal">
+                    <a class="project-card reveal" href="./projects/cinepeek.html">
                         <div class="project-image-wrap">
                             <img src="./assets/images/CinePeek.jpg" alt="Preview of CinePeek project"
                                 class="project-img">
@@ -146,9 +147,9 @@
                                 <li>Responsive UI</li>
                             </ul>
                         </div>
-                    </article>
+                    </a>
 
-                    <article class="project-card reveal reveal-delay">
+                    <a class="project-card reveal reveal-delay" href="./projects/traffic-flow-prediction.html">
                         <div class="project-image-wrap">
                             <img src="./assets/images/Traffic.jpeg"
                                 alt="Visualization for traffic flow prediction project" class="project-img">
@@ -166,9 +167,9 @@
                                 <li>Data Analysis</li>
                             </ul>
                         </div>
-                    </article>
+                    </a>
 
-                    <article class="project-card reveal reveal-delay-2">
+                    <a class="project-card reveal reveal-delay-2" href="./projects/speech-to-text-ai.html">
                         <div class="project-image-wrap project-image-accent">
                             <img src="./assets/images/SpeechToText.jpg"
                                 alt="Creative placeholder artwork for speech to text concept" class="project-img">
@@ -186,7 +187,7 @@
                                 <li>Product Thinking</li>
                             </ul>
                         </div>
-                    </article>
+                    </a>
                 </div>
             </section>
 

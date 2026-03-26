@@ -29,11 +29,29 @@ menuToggle.addEventListener("click", () => {
   menuToggle.setAttribute("aria-expanded", String(isOpen));
 });
 
+// Close nav panel with Escape and return focus to menu button
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    if (navPanel.classList.contains("open")) {
+      navPanel.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.focus();
+    }
+  }
+});
+
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     navPanel.classList.remove("open");
     menuToggle.setAttribute("aria-expanded", "false");
   });
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 760) {
+    navPanel.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+  }
 });
 
 const observer = new IntersectionObserver(
