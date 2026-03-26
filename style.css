@@ -142,7 +142,12 @@ main {
 }
 
 .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding: 1.1rem clamp(1rem, 3vw, 1.5rem) 0;
+  z-index: 1000;
 }
 
 .navbar {
@@ -270,10 +275,11 @@ main {
 main {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 2rem clamp(0.95rem, 2.8vw, 1.35rem) 4.5rem;
+  padding: 6.9rem clamp(0.95rem, 2.8vw, 1.35rem) 4.5rem;
 }
 
 .section {
+  scroll-margin-top: 6.8rem;
   padding-top: 4.75rem;
 }
 
@@ -284,6 +290,7 @@ main {
   gap: 2.4rem;
   align-items: center;
   padding-top: 2.8rem;
+  position: relative;
 }
 
 .hero-copy {
@@ -335,6 +342,7 @@ main {
   gap: 1rem;
   margin-top: 1.4rem;
   min-width: 0;
+  align-items: center;
 }
 
 .btn {
@@ -428,16 +436,18 @@ main {
   position: relative;
   min-height: 30rem;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   width: 100%;
   overflow: hidden;
   align-self: start;
+  gap: 1.25rem;
 }
 
 .portrait-card {
   position: relative;
-  width: min(100%, 28rem);
+  width: min(100%, 24rem);
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   padding: 0.85rem;
@@ -545,7 +555,7 @@ main {
 
 .project-image-wrap {
   position: relative;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
 }
 
@@ -947,7 +957,7 @@ main {
   .project-grid {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: minmax(310px, 360px);
+    grid-auto-columns: minmax(340px, 390px);
     grid-template-columns: none;
     overflow-x: auto;
     overflow-y: hidden;
@@ -1101,8 +1111,8 @@ main {
   }
 
   .portrait-card {
-    width: min(100%, 24rem);
-    max-width: 24rem;
+    width: min(100%, 20rem);
+    max-width: 20rem;
     margin-inline: auto;
   }
 
@@ -1128,7 +1138,7 @@ main {
   }
 
   main {
-    padding-top: 1.8rem;
+    padding-top: 6.3rem;
     padding-bottom: 4rem;
   }
 
@@ -1162,6 +1172,7 @@ main {
 
   .hero-actions {
     flex-direction: column;
+    align-items: stretch;
   }
 
   .btn,
@@ -1206,8 +1217,8 @@ main {
   }
 
   .portrait-card {
-    width: min(100%, 20rem);
-    max-width: 20rem;
+    width: min(100%, 17rem);
+    max-width: 17rem;
   }
 
   .project-hero-copy,
