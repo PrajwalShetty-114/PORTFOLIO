@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Declining Art of Puppetry | Project Detail</title>
+    <script>
+        if (localStorage.getItem("theme") === "light") {
+            document.documentElement.classList.add("light");
+        }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -11,18 +16,113 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
 </head>
-<body>
+<body class="">
     <main class="project-page">
         <div class="project-page-shell">
-            <a class="project-back" href="../index.html#projects">Back to Projects</a>
-            <p class="eyebrow">Project Detail</p>
-            <h1>The Declining Art of Puppetry</h1>
-            <p class="project-page-copy">
-                This project explored the cultural importance of traditional puppetry, the reasons behind its decline,
-                and possible preservation methods. It reflects my interest in research, documentation, and connecting
-                technology and storytelling with cultural awareness.
-            </p>
+            <div class="project-page-topbar">
+                <a class="project-back" href="../index.html#projects">Back to Projects</a>
+                <button id="page-theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+                    <span class="theme-icon" aria-hidden="true">Moon</span>
+                </button>
+            </div>
+
+            <section class="project-hero">
+                <div class="project-hero-copy">
+                    <p class="eyebrow">Research Project</p>
+                    <h1>The Declining Art of Puppetry</h1>
+                    <p class="project-page-copy">
+                        This project explored the cultural importance of traditional puppetry, the reasons behind its
+                        decline, and possible ways it can be preserved. It reflects my interest in research,
+                        documentation, and using clear communication to highlight meaningful cultural topics.
+                    </p>
+
+                    <div class="project-meta">
+                        <span>Research</span>
+                        <span>Documentation</span>
+                        <span>Cultural Study</span>
+                        <span>Storytelling</span>
+                    </div>
+
+                    <div class="project-links-row">
+                        <a href="#">Presentation Placeholder</a>
+                        <a href="#">Reference Placeholder</a>
+                    </div>
+                </div>
+
+                <div class="project-hero-media">
+                    <img src="../assets/images/DecliningArtOfPuppetry.jpeg" alt="Declining Art of Puppetry project preview">
+                </div>
+            </section>
+
+            <section class="project-summary-grid">
+                <article class="project-summary-card">
+                    <span>Project Goal</span>
+                    <strong>Document a traditional art form and understand its decline.</strong>
+                </article>
+                <article class="project-summary-card">
+                    <span>Main Focus</span>
+                    <strong>Research, analysis, and preservation-oriented communication.</strong>
+                </article>
+                <article class="project-summary-card">
+                    <span>What It Shows</span>
+                    <strong>Curiosity, writing ability, and cultural awareness.</strong>
+                </article>
+            </section>
+
+            <section class="project-detail-grid">
+                <article class="project-section">
+                    <h2>Overview</h2>
+                    <p>
+                        Not every important project is code-heavy. This one focused on understanding the cultural role
+                        of puppetry, what has caused its decline over time, and how preservation could be supported
+                        through awareness, modernization, and digital visibility.
+                    </p>
+
+                    <h2>Key Highlights</h2>
+                    <ul class="project-list">
+                        <li>Studied the historical and cultural significance of traditional puppetry.</li>
+                        <li>Documented the challenges that make continuation and audience growth difficult today.</li>
+                        <li>Proposed preservation ideas involving awareness, modernization, and digital media.</li>
+                        <li>Strengthened research, presentation, and structured documentation skills.</li>
+                    </ul>
+                </article>
+
+                <article class="project-section">
+                    <h2>Project Strengths</h2>
+                    <ul class="project-pill-list">
+                        <li>Research</li>
+                        <li>Analysis</li>
+                        <li>Documentation</li>
+                        <li>Presentation</li>
+                        <li>Communication</li>
+                    </ul>
+
+                    <div class="project-note">
+                        <strong>What I learned</strong>
+                        This project reminded me that strong technical work also depends on observation, empathy, and
+                        the ability to explain why something matters.
+                    </div>
+                </article>
+            </section>
         </div>
     </main>
+    <script>
+        if (document.documentElement.classList.contains("light")) {
+            document.body.classList.add("light");
+        }
+        const pageToggleBtn = document.getElementById("page-theme-toggle");
+        const pageThemeIcon = pageToggleBtn.querySelector(".theme-icon");
+        const syncPageTheme = () => {
+            const isLight = document.body.classList.contains("light");
+            pageThemeIcon.textContent = isLight ? "Sun" : "Moon";
+            pageToggleBtn.setAttribute("aria-pressed", String(isLight));
+        };
+        syncPageTheme();
+        pageToggleBtn.addEventListener("click", () => {
+            document.body.classList.toggle("light");
+            localStorage.setItem("theme", document.body.classList.contains("light") ? "light" : "dark");
+            syncPageTheme();
+        });
+    </script>
 </body>
 </html>

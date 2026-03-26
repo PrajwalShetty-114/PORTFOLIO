@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speech to Text AI | Project Detail</title>
+    <script>
+        if (localStorage.getItem("theme") === "light") {
+            document.documentElement.classList.add("light");
+        }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -11,18 +16,113 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
 </head>
-<body>
+<body class="">
     <main class="project-page">
         <div class="project-page-shell">
-            <a class="project-back" href="../index.html#projects">Back to Projects</a>
-            <p class="eyebrow">Project Detail</p>
-            <h1>Speech to Text AI</h1>
-            <p class="project-page-copy">
-                Speech to Text AI is an accessibility-focused project that converts spoken audio into text and then
-                generates useful summaries. The goal is to support hearing-impaired and multilingual users while also
-                making lectures, conversations, and spoken content easier to review and reuse.
-            </p>
+            <div class="project-page-topbar">
+                <a class="project-back" href="../index.html#projects">Back to Projects</a>
+                <button id="page-theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+                    <span class="theme-icon" aria-hidden="true">Moon</span>
+                </button>
+            </div>
+
+            <section class="project-hero">
+                <div class="project-hero-copy">
+                    <p class="eyebrow">AI Accessibility Case Study</p>
+                    <h1>Speech to Text AI</h1>
+                    <p class="project-page-copy">
+                        Speech to Text AI is an accessibility-focused project that converts spoken audio into text and
+                        then produces useful summaries. It was built with the idea of supporting hearing-impaired and
+                        multilingual users while also turning lectures and conversations into reusable notes.
+                    </p>
+
+                    <div class="project-meta">
+                        <span>Python</span>
+                        <span>NLP</span>
+                        <span>Speech Processing</span>
+                        <span>Summarization</span>
+                    </div>
+
+                    <div class="project-links-row">
+                        <a href="#">Demo Placeholder</a>
+                        <a href="#">GitHub Placeholder</a>
+                    </div>
+                </div>
+
+                <div class="project-hero-media">
+                    <img src="../assets/images/SpeechToText.jpg" alt="Speech to Text AI project preview">
+                </div>
+            </section>
+
+            <section class="project-summary-grid">
+                <article class="project-summary-card">
+                    <span>Project Goal</span>
+                    <strong>Improve accessibility and save time through AI-powered transcription.</strong>
+                </article>
+                <article class="project-summary-card">
+                    <span>Main Focus</span>
+                    <strong>Speech conversion, text understanding, and summary output.</strong>
+                </article>
+                <article class="project-summary-card">
+                    <span>What It Shows</span>
+                    <strong>Interest in AI products with human-centered impact.</strong>
+                </article>
+            </section>
+
+            <section class="project-detail-grid">
+                <article class="project-section">
+                    <h2>Overview</h2>
+                    <p>
+                        The motivation behind this project was to make spoken content easier to access and reuse. Audio
+                        often contains valuable information, but it is difficult to search, review, and summarize. This
+                        project explores how AI can bridge that gap.
+                    </p>
+
+                    <h2>Key Highlights</h2>
+                    <ul class="project-list">
+                        <li>Convert spoken input into readable text for easier review and access.</li>
+                        <li>Generate summaries that reduce the effort required to revisit long conversations or lectures.</li>
+                        <li>Support use cases around accessibility, multilingual understanding, and educational productivity.</li>
+                        <li>Strengthen my hands-on understanding of NLP and AI integration.</li>
+                    </ul>
+                </article>
+
+                <article class="project-section">
+                    <h2>Tech Stack</h2>
+                    <ul class="project-pill-list">
+                        <li>Python</li>
+                        <li>Speech Processing</li>
+                        <li>NLP</li>
+                        <li>Summarization</li>
+                        <li>API Integration</li>
+                    </ul>
+
+                    <div class="project-note">
+                        <strong>What I learned</strong>
+                        Building around accessibility made me think beyond technical output and focus on whether the
+                        final tool would be genuinely useful to real people.
+                    </div>
+                </article>
+            </section>
         </div>
     </main>
+    <script>
+        if (document.documentElement.classList.contains("light")) {
+            document.body.classList.add("light");
+        }
+        const pageToggleBtn = document.getElementById("page-theme-toggle");
+        const pageThemeIcon = pageToggleBtn.querySelector(".theme-icon");
+        const syncPageTheme = () => {
+            const isLight = document.body.classList.contains("light");
+            pageThemeIcon.textContent = isLight ? "Sun" : "Moon";
+            pageToggleBtn.setAttribute("aria-pressed", String(isLight));
+        };
+        syncPageTheme();
+        pageToggleBtn.addEventListener("click", () => {
+            document.body.classList.toggle("light");
+            localStorage.setItem("theme", document.body.classList.contains("light") ? "light" : "dark");
+            syncPageTheme();
+        });
+    </script>
 </body>
 </html>

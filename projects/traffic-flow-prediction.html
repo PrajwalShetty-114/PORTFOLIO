@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Traffic Flow Prediction | Project Detail</title>
+    <script>
+        if (localStorage.getItem("theme") === "light") {
+            document.documentElement.classList.add("light");
+        }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -11,18 +16,113 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
 </head>
-<body>
+<body class="">
     <main class="project-page">
         <div class="project-page-shell">
-            <a class="project-back" href="../index.html#projects">Back to Projects</a>
-            <p class="eyebrow">Project Detail</p>
-            <h1>Traffic Flow Prediction</h1>
-            <p class="project-page-copy">
-                This project focuses on predicting traffic flow patterns using machine learning techniques. It was built
-                to explore how data-driven forecasting can support route planning, signal optimization, and smarter
-                urban mobility decisions while improving my hands-on experience with datasets and model evaluation.
-            </p>
+            <div class="project-page-topbar">
+                <a class="project-back" href="../index.html#projects">Back to Projects</a>
+                <button id="page-theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+                    <span class="theme-icon" aria-hidden="true">Moon</span>
+                </button>
+            </div>
+
+            <section class="project-hero">
+                <div class="project-hero-copy">
+                    <p class="eyebrow">Machine Learning Case Study</p>
+                    <h1>Traffic Flow Prediction</h1>
+                    <p class="project-page-copy">
+                        This project explores how machine learning can be used to predict traffic flow patterns from
+                        data. The broader goal was to understand how forecasting could support route planning, signal
+                        optimization, and smarter urban mobility decisions.
+                    </p>
+
+                    <div class="project-meta">
+                        <span>Python</span>
+                        <span>Machine Learning</span>
+                        <span>Data Preprocessing</span>
+                        <span>Model Evaluation</span>
+                    </div>
+
+                    <div class="project-links-row">
+                        <a href="#">Demo Placeholder</a>
+                        <a href="#">GitHub Placeholder</a>
+                    </div>
+                </div>
+
+                <div class="project-hero-media">
+                    <img src="../assets/images/Traffic.jpeg" alt="Traffic Flow Prediction project preview">
+                </div>
+            </section>
+
+            <section class="project-summary-grid">
+                <article class="project-summary-card">
+                    <span>Project Goal</span>
+                    <strong>Predict traffic patterns using machine learning techniques.</strong>
+                </article>
+                <article class="project-summary-card">
+                    <span>Main Focus</span>
+                    <strong>Dataset preparation, training logic, and evaluation.</strong>
+                </article>
+                <article class="project-summary-card">
+                    <span>What It Shows</span>
+                    <strong>Analytical thinking with real-world problem framing.</strong>
+                </article>
+            </section>
+
+            <section class="project-detail-grid">
+                <article class="project-section">
+                    <h2>Overview</h2>
+                    <p>
+                        Traffic systems generate large amounts of data, but that data becomes useful only when it helps
+                        predict future movement. This project was built to study that idea through a machine learning
+                        workflow focused on understanding patterns and turning them into actionable forecasts.
+                    </p>
+
+                    <h2>Key Highlights</h2>
+                    <ul class="project-list">
+                        <li>Worked with real datasets to understand flow patterns and prepare usable input data.</li>
+                        <li>Explored preprocessing steps that improve the quality of model training.</li>
+                        <li>Focused on evaluation to understand how well the model performs in a practical setting.</li>
+                        <li>Connected the technical work to larger outcomes like smart city planning and emergency routing.</li>
+                    </ul>
+                </article>
+
+                <article class="project-section">
+                    <h2>Tech Stack</h2>
+                    <ul class="project-pill-list">
+                        <li>Python</li>
+                        <li>Machine Learning</li>
+                        <li>Data Cleaning</li>
+                        <li>Feature Preparation</li>
+                        <li>Model Evaluation</li>
+                    </ul>
+
+                    <div class="project-note">
+                        <strong>What I learned</strong>
+                        This project strengthened my understanding of data preprocessing, model behavior, and how to
+                        connect technical outputs to real urban and operational impact.
+                    </div>
+                </article>
+            </section>
         </div>
     </main>
+    <script>
+        if (document.documentElement.classList.contains("light")) {
+            document.body.classList.add("light");
+        }
+        const pageToggleBtn = document.getElementById("page-theme-toggle");
+        const pageThemeIcon = pageToggleBtn.querySelector(".theme-icon");
+        const syncPageTheme = () => {
+            const isLight = document.body.classList.contains("light");
+            pageThemeIcon.textContent = isLight ? "Sun" : "Moon";
+            pageToggleBtn.setAttribute("aria-pressed", String(isLight));
+        };
+        syncPageTheme();
+        pageToggleBtn.addEventListener("click", () => {
+            document.body.classList.toggle("light");
+            localStorage.setItem("theme", document.body.classList.contains("light") ? "light" : "dark");
+            syncPageTheme();
+        });
+    </script>
 </body>
 </html>

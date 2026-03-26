@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CinePeek | Project Detail</title>
+    <script>
+        if (localStorage.getItem("theme") === "light") {
+            document.documentElement.classList.add("light");
+        }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -11,18 +16,115 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
 </head>
-<body>
+<body class="">
     <main class="project-page">
         <div class="project-page-shell">
-            <a class="project-back" href="../index.html#projects">Back to Projects</a>
-            <p class="eyebrow">Project Detail</p>
-            <h1>CinePeek</h1>
-            <p class="project-page-copy">
-                CinePeek is a movie and TV show discovery web app built with Node.js, Express.js, and EJS. It helps
-                users explore content by genre and language, get random recommendations, and save favorites into a
-                personal watchlist using data from the TMDb API.
-            </p>
+            <div class="project-page-topbar">
+                <a class="project-back" href="../index.html#projects">Back to Projects</a>
+                <button id="page-theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+                    <span class="theme-icon" aria-hidden="true">Moon</span>
+                </button>
+            </div>
+
+            <section class="project-hero">
+                <div class="project-hero-copy">
+                    <p class="eyebrow">Web App Case Study</p>
+                    <h1>CinePeek</h1>
+                    <p class="project-page-copy">
+                        CinePeek is a movie and TV discovery web app built with Node.js, Express.js, and EJS. It was
+                        designed to make exploring content feel fast and enjoyable through genre filters, language
+                        selection, random picks, and a personal watchlist powered by the TMDb API.
+                    </p>
+
+                    <div class="project-meta">
+                        <span>Node.js</span>
+                        <span>Express.js</span>
+                        <span>EJS</span>
+                        <span>TMDb API</span>
+                    </div>
+
+                    <div class="project-links-row">
+                        <a href="#">Live Demo Placeholder</a>
+                        <a href="#">GitHub Placeholder</a>
+                    </div>
+                </div>
+
+                <div class="project-hero-media">
+                    <img src="../assets/images/CinePeek.jpg" alt="CinePeek project preview">
+                </div>
+            </section>
+
+            <section class="project-summary-grid">
+                <article class="project-summary-card">
+                    <span>Project Goal</span>
+                    <strong>Create a fun and usable movie discovery experience.</strong>
+                </article>
+                <article class="project-summary-card">
+                    <span>Main Focus</span>
+                    <strong>API integration, filtering, and watchlist interaction.</strong>
+                </article>
+                <article class="project-summary-card">
+                    <span>What It Shows</span>
+                    <strong>Full stack thinking with practical frontend delivery.</strong>
+                </article>
+            </section>
+
+            <section class="project-detail-grid">
+                <article class="project-section">
+                    <h2>Overview</h2>
+                    <p>
+                        The idea behind CinePeek was to build something that feels more dynamic than a static catalog.
+                        Instead of only listing movies, the app encourages exploration through filters and random
+                        suggestions while still giving users a simple way to save content they want to revisit.
+                    </p>
+
+                    <h2>Key Highlights</h2>
+                    <ul class="project-list">
+                        <li>Browse titles by genre and language to make discovery more personalized.</li>
+                        <li>Use random recommendations to create a more engaging browsing flow.</li>
+                        <li>Save favorites into a watchlist to support repeat use and user continuity.</li>
+                        <li>Render pages with EJS so the experience feels structured and fast to navigate.</li>
+                    </ul>
+                </article>
+
+                <article class="project-section">
+                    <h2>Tech Stack</h2>
+                    <ul class="project-pill-list">
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>EJS</li>
+                        <li>JavaScript</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>TMDb API</li>
+                    </ul>
+
+                    <div class="project-note">
+                        <strong>What I learned</strong>
+                        Connecting an external API to a user-friendly interface taught me how backend logic and
+                        presentation work together to make a product feel complete.
+                    </div>
+                </article>
+            </section>
         </div>
     </main>
+    <script>
+        if (document.documentElement.classList.contains("light")) {
+            document.body.classList.add("light");
+        }
+        const pageToggleBtn = document.getElementById("page-theme-toggle");
+        const pageThemeIcon = pageToggleBtn.querySelector(".theme-icon");
+        const syncPageTheme = () => {
+            const isLight = document.body.classList.contains("light");
+            pageThemeIcon.textContent = isLight ? "Sun" : "Moon";
+            pageToggleBtn.setAttribute("aria-pressed", String(isLight));
+        };
+        syncPageTheme();
+        pageToggleBtn.addEventListener("click", () => {
+            document.body.classList.toggle("light");
+            localStorage.setItem("theme", document.body.classList.contains("light") ? "light" : "dark");
+            syncPageTheme();
+        });
+    </script>
 </body>
 </html>
