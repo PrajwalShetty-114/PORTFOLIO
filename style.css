@@ -366,6 +366,28 @@ main {
   border: 1px solid var(--line);
 }
 
+.btn-resume {
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 200, 110, 0.16), rgba(125, 249, 198, 0.12));
+  color: var(--text);
+  border: 1px solid rgba(255, 200, 110, 0.24);
+  overflow: hidden;
+}
+
+.btn-resume::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 20%, rgba(255, 255, 255, 0.16) 50%, transparent 80%);
+  transform: translateX(-120%);
+  transition: transform 0.5s ease;
+}
+
+.btn-resume:hover::before,
+.btn-resume:focus-visible::before {
+  transform: translateX(120%);
+}
+
 .hero-metrics {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
