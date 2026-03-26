@@ -1069,11 +1069,11 @@ main {
 
 @media (max-width: 760px) {
   main {
-    padding-top: 7.3rem;
+    padding-top: 8rem;
   }
 
   .section {
-    scroll-margin-top: 7.2rem;
+    scroll-margin-top: 7.9rem;
   }
 
   .navbar {
@@ -1134,6 +1134,10 @@ main {
     padding: 1.2rem;
   }
 
+  .hero {
+    padding-top: 0.75rem;
+  }
+
 }
 
 @media (max-width: 560px) {
@@ -1146,12 +1150,12 @@ main {
   }
 
   main {
-    padding-top: 7.6rem;
+    padding-top: 8.6rem;
     padding-bottom: 4rem;
   }
 
   .section {
-    scroll-margin-top: 7.5rem;
+    scroll-margin-top: 8.5rem;
     padding-top: 3.5rem;
   }
 
