@@ -25,22 +25,25 @@
             <nav class="navbar">
                 <a class="logo" href="#hero">Prajwal Shetty</a>
 
-                <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-panel">
-                    <span></span>
-                    <span></span>
-                </button>
+                <div class="nav-actions">
+                    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+                        <span class="theme-icon" aria-hidden="true">Moon</span>
+                    </button>
+
+                    <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-panel">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
 
                 <div id="nav-panel" class="nav-panel">
                     <ul class="nav-links">
                         <li><a href="#hero">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#projects">Projects</a></li>
+                        <li><a href="#journey">Journey</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
-
-                    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
-                        <span class="theme-icon" aria-hidden="true">Moon</span>
-                    </button>
                 </div>
             </nav>
         </header>
@@ -48,11 +51,12 @@
         <main id="main-content">
             <section id="hero" class="hero">
                 <div class="hero-copy reveal">
-                    <p class="eyebrow">Full Stack Developer - AI Explorer - Problem Solver</p>
-                    <h1>Building thoughtful digital products with code, data, and clear design.</h1>
+                    <p class="eyebrow">Full Stack Developer - Node.js Builder - AI Explorer</p>
+                    <h1>Building responsive web products and practical AI-driven experiences.</h1>
                     <p class="hero-lead">
-                        I am Prajwal Shetty, a computer science student creating web experiences,
-                        backend systems, and machine learning projects that feel practical and human.
+                        I am Prajwal Shetty, a computer science undergraduate at Shri Madhwa Vadiraja Institute of
+                        Technology and Management, focused on full stack development with Node.js, Express.js, EJS,
+                        JavaScript, Python, and machine learning.
                     </p>
 
                     <div class="hero-actions">
@@ -63,15 +67,15 @@
                     <div class="hero-metrics">
                         <article>
                             <span>Focus</span>
-                            <strong>Backend + AI</strong>
+                            <strong>Full Stack + AI</strong>
                         </article>
                         <article>
                             <span>Building With</span>
-                            <strong>Node.js, JavaScript, ML</strong>
+                            <strong>Node.js, Express.js, Python</strong>
                         </article>
                         <article>
                             <span>Mindset</span>
-                            <strong>Clean, useful, scalable</strong>
+                            <strong>Detail-oriented and growth-driven</strong>
                         </article>
                     </div>
                 </div>
@@ -92,31 +96,31 @@
             <section id="about" class="about section">
                 <div class="section-heading reveal">
                     <p class="eyebrow">About Me</p>
-                    <h2>I like solving real problems, not just finishing assignments.</h2>
+                    <h2>I am building my foundation through real projects, modern web tools, and continuous learning.</h2>
                 </div>
 
                 <div class="about-grid">
                     <article class="about-card reveal">
-                        <h3>What I care about</h3>
+                        <h3>What I bring</h3>
                         <p>
-                            I enjoy turning messy ideas into usable products. That means thinking about performance,
-                            clarity, and whether the solution actually helps someone.
+                            I approach projects with patience, consistency, and attention to detail. I enjoy turning
+                            ideas into responsive, usable interfaces backed by clear logic and practical features.
                         </p>
                     </article>
 
                     <article class="about-card reveal reveal-delay">
-                        <h3>How I build</h3>
+                        <h3>How I work</h3>
                         <p>
-                            My projects usually begin with backend logic and data flow, then I shape the interface so
-                            the experience feels simple instead of technical.
+                            My workflow usually starts with structure and backend thinking, then moves into interface
+                            design so the final experience feels simple, useful, and easy to navigate.
                         </p>
                     </article>
 
                     <article class="about-card reveal reveal-delay-2">
-                        <h3>What I am exploring</h3>
+                        <h3>What I am growing into</h3>
                         <p>
-                            I am especially interested in AI-assisted tools, machine learning workflows, and modern web
-                            applications that combine utility with strong visual identity.
+                            I am especially interested in full stack products, NLP-based tools, and machine learning
+                            workflows that improve accessibility, productivity, and real-world decision making.
                         </p>
                     </article>
                 </div>
@@ -125,7 +129,7 @@
             <section id="projects" class="projects section">
                 <div class="section-heading reveal">
                     <p class="eyebrow">Selected Work</p>
-                    <h2>Projects that reflect how I think, build, and experiment.</h2>
+                    <h2>Projects that show how I build products, explore AI, and communicate ideas.</h2>
                 </div>
 
                 <div class="project-grid">
@@ -138,13 +142,15 @@
                         <div class="project-body">
                             <h3>CinePeek</h3>
                             <p>
-                                A movie discovery experience powered by the TMDb API, designed to make browsing,
-                                exploring, and comparing films feel fast and engaging.
+                                A movie and TV discovery app built with Node.js, Express.js, and EJS, featuring genre
+                                and language-based search, random recommendations, and a personal watchlist powered by
+                                the TMDb API.
                             </p>
                             <ul class="project-stack">
+                                <li>Node.js</li>
+                                <li>Express.js</li>
                                 <li>JavaScript</li>
-                                <li>API Integration</li>
-                                <li>Responsive UI</li>
+                                <li>EJS</li>
                             </ul>
                         </div>
                     </a>
@@ -158,13 +164,13 @@
                         <div class="project-body">
                             <h3>Traffic Flow Prediction</h3>
                             <p>
-                                A machine learning project focused on identifying traffic patterns and forecasting flow
-                                trends to support smarter route planning and urban mobility analysis.
+                                A machine learning project designed to predict traffic patterns from data, with a focus
+                                on smarter routing, urban planning insights, and model evaluation using real datasets.
                             </p>
                             <ul class="project-stack">
                                 <li>Python</li>
-                                <li>ML Models</li>
-                                <li>Data Analysis</li>
+                                <li>Machine Learning</li>
+                                <li>Data Preprocessing</li>
                             </ul>
                         </div>
                     </a>
@@ -178,16 +184,131 @@
                         <div class="project-body">
                             <h3>Speech to Text AI</h3>
                             <p>
-                                A concept-driven application for converting spoken audio into structured text with
-                                summarization, making conversations easier to review and reuse.
+                                An AI-based project that converts speech into text and summarizes the output, aimed at
+                                improving accessibility, saving time, and helping turn lectures or conversations into
+                                useful notes.
                             </p>
                             <ul class="project-stack">
+                                <li>Python</li>
+                                <li>NLP</li>
                                 <li>Speech Processing</li>
-                                <li>Summarization</li>
-                                <li>Product Thinking</li>
                             </ul>
                         </div>
                     </a>
+
+                    <a class="project-card reveal" href="./projects/declining-art-of-puppetry.html">
+                        <div class="project-image-wrap">
+                            <img src="./assets/images/PRAJWAL.jpg" alt="Placeholder visual for The Declining Art of Puppetry project"
+                                class="project-img">
+                            <span class="project-tag">Research Project</span>
+                        </div>
+                        <div class="project-body">
+                            <h3>The Declining Art of Puppetry</h3>
+                            <p>
+                                A research and documentation project exploring the cultural significance of traditional
+                                puppetry, the reasons for its decline, and ways preservation can be supported through
+                                awareness, modernization, and digital media.
+                            </p>
+                            <ul class="project-stack">
+                                <li>Research</li>
+                                <li>Documentation</li>
+                                <li>Storytelling</li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <section id="journey" class="section">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Experience & Learning</p>
+                    <h2>I am building my profile through industry exposure, coursework, and hands-on practice.</h2>
+                </div>
+
+                <div class="journey-grid">
+                    <article class="info-card reveal">
+                        <h3>Work Experience</h3>
+                        <div class="info-item">
+                            <div class="info-meta">
+                                <strong>Edutainer</strong>
+                                <span>Full Stack Web Developer • Feb 2026 - Present</span>
+                            </div>
+                            <p>Working on responsive websites and strengthening real-world frontend and full stack development skills.</p>
+                        </div>
+                    </article>
+
+                    <article class="info-card reveal reveal-delay">
+                        <h3>Education</h3>
+                        <div class="info-item">
+                            <div class="info-meta">
+                                <strong>SMVITM, Udupi</strong>
+                                <span>Engineering • Aug 2022 - Present</span>
+                            </div>
+                            <p>Computer Science undergraduate developing a strong base in programming, data structures, and software building.</p>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-meta">
+                                <strong>Dr NSAM College, Nitte</strong>
+                                <span>12th / PUC • Aug 2020 - May 2022</span>
+                            </div>
+                            <p>Studied Physics, Chemistry, Mathematics, and Computer Science.</p>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-meta">
+                                <strong>St Joseph English Medium School, Belman</strong>
+                                <span>10th • Jun 2010 - May 2020</span>
+                            </div>
+                            <p>Built a strong early foundation in science, mathematics, and communication.</p>
+                        </div>
+                    </article>
+
+                    <article class="info-card reveal reveal-delay-2">
+                        <h3>Certifications</h3>
+                        <div class="info-item">
+                            <div class="info-meta">
+                                <strong>The Complete JavaScript Course 2025</strong>
+                                <span>Udemy</span>
+                            </div>
+                            <p>Strengthening core JavaScript, DOM work, asynchronous programming, and interactive project building.</p>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-meta">
+                                <strong>Full-Stack Web Development Bootcamp</strong>
+                                <span>Udemy</span>
+                            </div>
+                            <p>Practicing front-end and back-end development across HTML, CSS, JavaScript, React, Node.js, APIs, and databases.</p>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-meta">
+                                <strong>Git and GitHub Bootcamp</strong>
+                                <span>Udemy</span>
+                            </div>
+                            <p>Learning version control, branching, merging, and team-oriented workflows.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="section-heading reveal section-heading-compact">
+                    <p class="eyebrow">Skills</p>
+                    <h2>Tools and technologies I am actively using and improving.</h2>
+                </div>
+
+                <div class="skills-cloud reveal">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>Node.js</span>
+                    <span>Express.js</span>
+                    <span>EJS</span>
+                    <span>Python</span>
+                    <span>Java</span>
+                    <span>C</span>
+                    <span>Git</span>
+                    <span>Postman</span>
+                    <span>VS Code</span>
+                    <span>OOP</span>
+                    <span>Data Structures</span>
+                    <span>Algorithms</span>
                 </div>
             </section>
 
@@ -195,20 +316,21 @@
                 <div class="contact-shell reveal">
                     <div class="section-heading">
                         <p class="eyebrow">Contact</p>
-                        <h2>If you want to build something meaningful, I would love to talk.</h2>
+                        <h2>If you are looking for a developer who is learning fast and building seriously, I would love to connect.</h2>
                     </div>
 
                     <p class="contact-copy">
-                        I am open to internships, collaborations, and conversations about full stack development,
-                        backend systems, and AI-driven product ideas.
+                        I am currently looking for opportunities in full stack development where I can contribute,
+                        learn from a strong team, and keep growing through meaningful work.
                     </p>
 
                     <div class="contact-list">
+                        <a href="tel:+918123267670">+91 8123267670</a>
                         <a href="mailto:prajwal.22cs114@sode-edu.in">prajwal.22cs114@sode-edu.in</a>
-                        <!-- <span>LinkedIn and GitHub links can be added next.</span> -->
                         <a href="https://www.linkedin.com/in/prajwal-shetty-4499332a7">LinkedIn</a>
                         <a href="https://github.com/PrajwalShetty-114">GitHub</a>
-
+                        <a href="#">Website</a>
+                        <a href="#">Twitter</a>
                     </div>
                 </div>
             </section>
