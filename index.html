@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prajwal Shetty | Portfolio</title>
+    <meta
+        name="description"
+        content="Portfolio of Prajwal Shetty, a full stack developer focused on backend systems, machine learning experiments, and AI-driven products."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-shell">
+        <div class="ambient ambient-one"></div>
+        <div class="ambient ambient-two"></div>
+
+        <header class="site-header">
+            <nav class="navbar">
+                <a class="logo" href="#hero">Prajwal Shetty</a>
+
+                <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="nav-panel">
+                    <ul class="nav-links">
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+
+                    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+                        <span class="theme-icon" aria-hidden="true">Moon</span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section id="hero" class="hero">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">Full Stack Developer - AI Explorer - Problem Solver</p>
+                    <h1>Building thoughtful digital products with code, data, and clear design.</h1>
+                    <p class="hero-lead">
+                        I am Prajwal Shetty, a computer science student creating web experiences,
+                        backend systems, and machine learning projects that feel practical and human.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#projects">Explore Projects</a>
+                        <a class="btn btn-secondary" href="#contact">Let's Connect</a>
+                    </div>
+
+                    <div class="hero-metrics">
+                        <article>
+                            <span>Focus</span>
+                            <strong>Backend + AI</strong>
+                        </article>
+                        <article>
+                            <span>Building With</span>
+                            <strong>Node.js, JavaScript, ML</strong>
+                        </article>
+                        <article>
+                            <span>Mindset</span>
+                            <strong>Clean, useful, scalable</strong>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal reveal-delay">
+                    <div class="portrait-card">
+                        <div class="portrait-glow"></div>
+                        <img src="./assets/images/PRAJWAL.jpg" alt="Portrait of Prajwal Shetty" class="profile-pic">
+                    </div>
+
+                    <div class="floating-panel code-panel">
+                        <span class="panel-label">Current Direction</span>
+                        <p>Crafting portfolio-grade experiences with strong structure, polished visuals, and practical product thinking.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="about section">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">About Me</p>
+                    <h2>I like solving real problems, not just finishing assignments.</h2>
+                </div>
+
+                <div class="about-grid">
+                    <article class="about-card reveal">
+                        <h3>What I care about</h3>
+                        <p>
+                            I enjoy turning messy ideas into usable products. That means thinking about performance,
+                            clarity, and whether the solution actually helps someone.
+                        </p>
+                    </article>
+
+                    <article class="about-card reveal reveal-delay">
+                        <h3>How I build</h3>
+                        <p>
+                            My projects usually begin with backend logic and data flow, then I shape the interface so
+                            the experience feels simple instead of technical.
+                        </p>
+                    </article>
+
+                    <article class="about-card reveal reveal-delay-2">
+                        <h3>What I am exploring</h3>
+                        <p>
+                            I am especially interested in AI-assisted tools, machine learning workflows, and modern web
+                            applications that combine utility with strong visual identity.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="projects" class="projects section">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Selected Work</p>
+                    <h2>Projects that reflect how I think, build, and experiment.</h2>
+                </div>
+
+                <div class="project-grid">
+                    <article class="project-card reveal">
+                        <div class="project-image-wrap">
+                            <img src="./assets/images/Cinepeek.jpeg" alt="Preview of CinePeek project" class="project-img">
+                            <span class="project-tag">Web App</span>
+                        </div>
+                        <div class="project-body">
+                            <h3>CinePeek</h3>
+                            <p>
+                                A movie discovery experience powered by the TMDb API, designed to make browsing,
+                                exploring, and comparing films feel fast and engaging.
+                            </p>
+                            <ul class="project-stack">
+                                <li>JavaScript</li>
+                                <li>API Integration</li>
+                                <li>Responsive UI</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal reveal-delay">
+                        <div class="project-image-wrap">
+                            <img src="./assets/images/Traffic.jpeg" alt="Visualization for traffic flow prediction project" class="project-img">
+                            <span class="project-tag">Machine Learning</span>
+                        </div>
+                        <div class="project-body">
+                            <h3>Traffic Flow Prediction</h3>
+                            <p>
+                                A machine learning project focused on identifying traffic patterns and forecasting flow
+                                trends to support smarter route planning and urban mobility analysis.
+                            </p>
+                            <ul class="project-stack">
+                                <li>Python</li>
+                                <li>ML Models</li>
+                                <li>Data Analysis</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal reveal-delay-2">
+                        <div class="project-image-wrap project-image-accent">
+                            <img src="./assets/images/PRAJWAL.jpg" alt="Creative placeholder artwork for speech to text concept" class="project-img">
+                            <span class="project-tag">AI Workflow</span>
+                        </div>
+                        <div class="project-body">
+                            <h3>Speech to Text AI</h3>
+                            <p>
+                                A concept-driven application for converting spoken audio into structured text with
+                                summarization, making conversations easier to review and reuse.
+                            </p>
+                            <ul class="project-stack">
+                                <li>Speech Processing</li>
+                                <li>Summarization</li>
+                                <li>Product Thinking</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="contact" class="contact section">
+                <div class="contact-shell reveal">
+                    <div class="section-heading">
+                        <p class="eyebrow">Contact</p>
+                        <h2>If you want to build something meaningful, I would love to talk.</h2>
+                    </div>
+
+                    <p class="contact-copy">
+                        I am open to internships, collaborations, and conversations about full stack development,
+                        backend systems, and AI-driven product ideas.
+                    </p>
+
+                    <div class="contact-list">
+                        <a href="mailto:prajwal.22cs114@sode-edu.in">prajwal.22cs114@sode-edu.in</a>
+                        <span>LinkedIn and GitHub links can be added next.</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
